@@ -1,3 +1,35 @@
 <ion-view title="Todos">
-    <ion-content overflow-scroll="true" padding="true" class="has-header"></ion-content>
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <ion-pane>
+            <ion-header-bar class="bar-royal">
+                <h1 class="title">Ionic Blank</h1>
+                <button class="button button-icon" ng-click="newTask()">
+                    <i class="ion-compose icon"></i>
+                </button>
+            </ion-header-bar>
+            <ion-content>
+                <ion-list>
+                    <ion-item ng-repeat="task in tasks"
+                              class="item-icon-right"
+                              ng-class="{complete: task.completed}"
+                              ng-click="updateTaskCompleted(task)">
+                        <i class="icon ion-ios-arrow-left"></i>
+                        <ion-option-button class="button-assertive" 
+                                           ng-click="deleteTask(task)">
+                            Delete
+                        </ion-option-button>
+                        <ion-option-button class="button-energized"
+                                           ng-click="edit(task)">
+                            Edit                   
+                        </ion-option-button>
+                        {{ task.title}}
+                    </ion-item>
+                </ion-list>
+
+            </ion-content>
+        </ion-pane>
+
+
+
+    </ion-content>
 </ion-view>
