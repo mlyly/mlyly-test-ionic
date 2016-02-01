@@ -1,5 +1,8 @@
 # Simple Ionic & Cordova app for testing
 
+NOTE: this app was copied from: 
+"Build an Ionic App in 45 minutes (or less)" - https://www.youtube.com/watch?v=mjjLq43miYY
+
 - Cordova
 - Ionic
 - local storage, WebSQL / wSQL-angular package
@@ -13,6 +16,12 @@ $ cd todo
 $ ionic serve
 $ ionic platform add ios
 $ ionic emulate ios
+```
+
+## Test in browser
+
+```bash
+$ ionic serve
 ```
 
 ## Links
