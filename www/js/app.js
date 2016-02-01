@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'wSQL'])
                 wSQL
                         .update("todo", {
                             title: task.title,
-                            completed: task.completed
+                            completed: task.completed ? 1 : 0
                         })
                         .where("id", task.id)
                         .query()
@@ -55,6 +55,12 @@ angular.module('starter', ['ionic', 'wSQL'])
                         });
             }
             $scope.deleteTask = deleteTask;
+
+            $scope.updateTaskCompleted = function (task) {
+                task.completed = !task.completed;   
+                updateTask(task);
+            }
+
 
             $scope.newTask = function () {
                 console.log("newTask()");

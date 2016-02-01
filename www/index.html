@@ -37,7 +37,7 @@
                 <ion-item ng-repeat="task in tasks"
                           class="item-icon-right"
                           ng-class="{complete: task.completed}"
-                          ng-click="task.completed = !task.completed">
+                          ng-click="updateTaskCompleted(task)">
                     <i class="icon ion-ios-arrow-left"></i>
                     <ion-option-button class="button-assertive" 
                                        ng-click="deleteTask(task)">
