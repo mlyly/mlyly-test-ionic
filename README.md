@@ -7,12 +7,12 @@
 ## Created with Ionic start app base
 
 ```bash
-$ npm install -g ionic cordova
+$ npm install -g ionic cordova ios-sim
 $ ionic start todo blank
 $ cd todo
 $ ionic serve
-$ ionic platform add android
-$ ionic emulate android
+$ ionic platform add ios
+$ ionic emulate ios
 ```
 
 ## Links
